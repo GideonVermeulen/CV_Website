@@ -59,9 +59,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+const showMoreLink = document.querySelector('.show-more-link');
+const extraInfoDiv = document.querySelector('.extra-info');
+const arrow = document.querySelector('.arrow');
 
-// Download CV button
-document.getElementById('downloadCv').addEventListener('click', function (e) {
-    // Automatically download the file from src/cv.pdf
-    // You may want to add: window.location.href = 'src/cv.pdf';
-});
+if (showMoreLink && extraInfoDiv && arrow) {
+    showMoreLink.addEventListener('click', function () {
+        const isOpening = !extraInfoDiv.classList.contains('open');
+        
+        extraInfoDiv.classList.toggle('open');
+        arrow.textContent = isOpening ? '▲' : '▼';
+        showMoreLink.innerHTML = isOpening ? 
+            'Show less <span class="arrow">▲</span>' : 
+            'Show more <span class="arrow">▼</span>';
+        
+        // Add rotation effect
+        arrow.classList.toggle('rotated', isOpening);
+    });
+}
