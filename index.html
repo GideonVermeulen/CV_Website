@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gideon Vermeulen - Software Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/Style.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">GV</div>
+                <span>GIDEON</span>
+            </a>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="social-icons">
+                <a href="mailto:gideonnicovermeulen@gmail.com" class="icon-link" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://github.com/GideonVermeulen" target="_blank" class="icon-link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text fade-in">
+                    <p class="hero-subtitle fade-in">Hi, my name is</p>
+                    <h1 class="hero-title fade-in">Gideon Vermeulen.</h1>
+                    <h2 class="hero-title fade-in" style="color: var(--text-light); font-size: clamp(1.8rem, 4vw, 3.5rem);">Software Developer & AI Enthusiast</h2>
+                    <p class="hero-description fade-in">
+                        I'm a third-year Bachelor of Computing student passionate about robotics, web development, and machine learning. I build solutions that bridge software with hardware to create real-world impact.
+                    </p>
+                    <div class="hero-buttons" style="display: flex; gap: 15px;">
+                        <a href="#contact" class="btn btn-primary fade-in">
+                            <i class="fas fa-paper-plane"></i> Contact Me
+                        </a>
+                        <a href="src/cv.pdf" class="btn fade-in" id="downloadCv" download="Gideon_Vermeulen_CV.pdf">
+                            <i class="fas fa-download"></i> Download CV
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image fade-in">
+                    <div class="headshot-frame animated">
+                        <img src="images/Headshot.jpg" alt="Gideon Vermeulen" class="headshot-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title fade-in" data-number="01.">About Me</h2>
+            <div class="section-content fade-in">
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>
+                            I'm a driven and hands-on third-year Bachelor of Computing student at Belgium Campus in Stellenbosch, deeply passionate about robotics, web development, and machine learning. I enjoy building solutions that bridge software with hardware — from self-watering plant systems and Discord-controlled Arduino bots to AI-powered prediction models.
+                        </p>
+                        <p>
+                            I have experience building both frontend and backend components of applications, especially in educational and research-focused settings. I've worked with REST APIs, public API integration, basic RESTful API design, and I love experimenting with tech that makes a real-world impact. I'm quick to learn, collaborative, and always eager to solve new problems through code.
+                        </p>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <i class="fas fa-code skill-icon"></i>
+                                <span>Full-Stack Development(student level)</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-robot skill-icon"></i>
+                                <span>Robotics & IoT</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-brain skill-icon"></i>
+                                <span>Machine Learning</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-microchip skill-icon"></i>
+                                <span>Embedded Systems</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title fade-in" data-number="02.">Education & Experience</h2>
+            <div class="section-content fade-in">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2022 - Present</div>
+                        <h3 class="timeline-title">Belgium Campus iTversity — Stellenbosch Campus</h3>
+                        <p class="timeline-text">Bachelor of Computing (BComp) — 3rd Year</p>
+                        <p class="timeline-text">Areas of focus: Software Engineering, AI, Embedded Systems, Web Development</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Graduated 2022</div>
+                        <h3 class="timeline-title">Paul Roos Gimnasium</h3>
+                        <p class="timeline-text">National Senior Certificate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title fade-in" data-number="03.">Technical Skills</h2>
+            <div class="section-content fade-in">
+                <div class="skills-grid">
+                    <div>
+                        <h3 style="color: var(--accent); margin-bottom: 15px;">Languages</h3>
+                        <p>JavaScript, C#, Java, Python, SQL, HTML/CSS, C++ (Arduino)</p>
+                    </div>
+                    <div>
+                        <h3 style="color: var(--accent); margin-bottom: 15px;">Frameworks / Libraries</h3>
+                        <p>Web: Node.js, Express.js, EJS, Flask</p>
+                        <p>Desktop: Java Swing, .NET (C#)</p>
+                        <p>AI/ML: scikit-learn, NumPy, YOLO, TensorFlow, Matplotlib, Seaborn</p>
+                    </div>
+                    <div>
+                        <h3 style="color: var(--accent); margin-bottom: 15px;">Databases</h3>
+                        <p>SQL Server Management Studio, SQLite, MongoDB, JavaDB</p>
+                    </div>
+                    <div>
+                        <h3 style="color: var(--accent); margin-bottom: 15px;">Tools / Platforms</h3>
+                        <p>Git & GitHub, VS Code, Visual Studio, Postman, Arduino IDE, GitHub Pages, Render, Discord API</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title fade-in" data-number="04.">Project Experience</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <h3 class="project-title">
+                            <i class="fas fa-seedling project-icon"></i>
+                            Self-Watering Smart Plant Pot
+                        </h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Arduino</span>
+                            <span class="project-tag">IoT</span>
+                            <span class="project-tag">Embedded</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            Monitors soil moisture, humidity, and temperature to trigger watering automatically. Uses Arduino hardware with custom control logic.
+                        </p>
+                        <div class="project-links">
+                            <span class="project-tag">In Progress</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <h3 class="project-title">
+                            <i class="fas fa-gas-pump project-icon"></i>
+                            ULP95 Fuel Price Prediction
+                        </h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">scikit-learn</span>
+                            <span class="project-tag">Flask</span>
+                            <span class="project-tag">Public API</span>
+                            <span class="project-tag">Web scraping</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            Predicts fuel prices in the South African coastal region using machine learning. Currently integrating web scraping and API input to automate predictions.
+                        </p>
+                        <div class="project-links">
+                            <span class="project-tag">In Progress</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <h3 class="project-title">
+                            <i class="fas fa-robot project-icon"></i>
+                            Water Hyacinth Detection
+                        </h3>
+                        <div class="project-tags">
+                            <span class="project-tag">YOLOv8</span>
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Arduino</span>
+                            <span class="project-tag">IoT</span>
+                            <span class="project-tag">Serial</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            YOLOv8-based object detection model to identify invasive water plants. Created and demoed a working Arduino-powered robot as part of an international project.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/GideonVermeulen/WaterhaycinthModel_With_arduino_code" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> GitHub Repo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <h3 class="project-title">
+                            <i class="fab fa-discord project-icon"></i>
+                            Arduino-Connected Discord Bot
+                        </h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Discord API</span>
+                            <span class="project-tag">Arduino</span>
+                            <span class="project-tag">Serial</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            Created a bot that blinks a physical LED on an Arduino when a Discord message is received. Combines Discord API with serial port communication.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/GideonVermeulen/My-First-Discord-Bot" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <h3 class="project-title">
+                            <i class="fas fa-graduation-cap project-icon"></i>
+                            Student Grade Prediction
+                        </h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">scikit-learn</span>
+                            <span class="project-tag">Flask</span>
+                            <span class="project-tag">NumPy</span>
+                            <span class="project-tag">pandas</span>
+                            <span class="project-tag">ANN</span>
+                            <span class="project-tag">Keras</span>
+                            <span class="project-tag">Matplotlib</span>
+                            <span class="project-tag">Seaborn</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            ANN powered student grade classifier built in Python with scikit-learn, deployed via Flask on Render. 
+                        </p>
+                        <div class="project-links">
+                            <a href="https://mlg282-project-1-website.onrender.com" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Website
+                            </a>
+                            <div class="project-links">
+                            <a href="https://github.com/CountessOreo/Grade-Prediction-Tool" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <h3 class="project-title">
+                            <i class="fas fa-comment project-icon"></i>
+                            Sentiment Analysis Web App
+                        </h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">NLP</span>
+                            <span class="project-tag">Flask</span>
+                            <span class="project-tag">pandas</span>
+                            <span class="project-tag">NumPy</span>
+                            <span class="project-tag">scikit-learn</span>
+                            <span class="project-tag">Matplotlib</span>
+                            <span class="project-tag">Seaborn</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            Analyzes and classifies text reviews as positive or negative using natural language processing.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://mlg282-project-2-website.onrender.com" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Website
+                            </a>
+                            <a href="https://github.com/CountessOreo/Sentiment-Analysis-Web-Dashboard" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> GitHub Repo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <h3 class="project-title">
+                            <i class="fas fa-user-md project-icon"></i>
+                            Student Wellness System
+                        </h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Java</span>
+                            <span class="project-tag">JavaDB</span>
+                            <span class="project-tag">Java Swing</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            Desktop application to manage counselors, appointments, and feedback. Built in Java using JavaDB and Java Swing.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/GideonVermeulen/PRG381_DesktopApp" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> GitHub Repo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <h3 class="project-title">
+                            <i class="fas fa-book project-icon"></i>
+                            Library Management System
+                        </h3>
+                        <div class="project-tags">
+                            <span class="project-tag">C#</span>
+                            <span class="project-tag">.NET</span>
+                            <span class="project-tag">SQLite</span>
+                            <span class="project-tag">Bcrypt</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            Book and client management desktop tool. Built in C# (.NET) using SQLite with Bcrypt for password security.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/FrederikWKnoetze/PRG-281-Library" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> GitHub Repo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <h3 class="project-title">
+                            <i class="fas fa-dragon project-icon"></i>
+                            Elden Ring Educational Website
+                        </h3>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">GitHub Pages</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            Fantasy themed educational platform using HTML, CSS, and JavaScript inspired by Elden Ring.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://frederikwknoetze.github.io/WPR-281" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Website
+                            </a>
+                            <a href="https://github.com/FrederikWKnoetze/WPR-281" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> GitHub Repo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title fade-in" data-number="05.">Contact Me</h2>
+            <div class="contact-container">
+                <div class="contact-info fade-in">
+                    <p>I'm currently seeking internship opportunities in web development, AI, embedded systems, and automation. Feel free to reach out if you're interested in working together!</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h3>Email</h3>
+                                <p>gideonnicovermeulebn@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h3>Phone</h3>
+                                <p>+27 63 563 2963</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div>
+                                <h3>GitHub</h3>
+                                <p>github.com/GideonVermeulen</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h3>Location</h3>
+                                <p>Stellenbosch, South Africa</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form fade-in">
+                    <form id="contactForm" action="https://formspree.io/f/xyzpebbw" method="POST">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" class="form-input" required></textarea>
+                        </div>
+                        <input type="hidden" name="_replyto" value="">
+                        <button type="submit" class="btn btn-submit">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                    <div id="successMessage" class="success-message">
+                        <i class="fas fa-check-circle" style="color: var(--accent); margin-right: 10px;"></i>
+                        Thank you for contacting me! I'll respond as soon as possible.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Designed & Built by Gideon Vermeulen</p>
+        </div>
+    </footer>
+<script src="Js/app.js"></script>
+</body>
+</html>
