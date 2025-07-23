@@ -25,21 +25,24 @@ const successMessage = document.getElementById('successMessage');
 
 contactForm.addEventListener('submit', function (e) {
     e.preventDefault();
-
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-
-    if (name && email && message) {
-        // Normally send the form data to a server here
-        successMessage.classList.add('show');
-
-        contactForm.reset();
-
-        setTimeout(() => {
-            successMessage.classList.remove('show');
-        }, 5000);
-    }
+    const formData = new FormData(contactForm);
+    fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            successMessage.classList.add('show');
+            contactForm.reset();
+            setTimeout(() => {
+                successMessage.classList.remove('show');
+            }, 5000);
+        } else {
+            alert('There was a problem submitting your form.');
+        }
+    });
 });
 
 // Smooth scrolling for navigation links
