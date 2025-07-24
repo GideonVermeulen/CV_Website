@@ -262,7 +262,7 @@
 
         /* Sections */
         section {
-            padding: 100px 0;
+            padding: 70px 0;
         }
 
         .section-title {
@@ -648,6 +648,60 @@
             font-size: 0.9rem;
         }
 
+        /* Hamburger menu styles */
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 1100;
+        }
+        .hamburger {
+            display: block;
+            width: 28px;
+            height: 3px;
+            background: var(--accent);
+            position: relative;
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+        .hamburger::before,
+        .hamburger::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 28px;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+        .hamburger::before {
+            top: -9px;
+        }
+        .hamburger::after {
+            top: 9px;
+        }
+
+        /* Mobile nav open state */
+        .nav-links.open {
+            display: flex !important;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 70vw;
+            max-width: 320px;
+            height: 100vh;
+            background: var(--secondary);
+            box-shadow: var(--shadow);
+            padding: 100px 30px 30px 30px;
+            gap: 30px;
+            z-index: 1050;
+            transition: var(--transition);
+            align-items: flex-start;
+        }
+
         /* Responsive Design */
         @media (max-width: 900px) {
             .hero-content {
@@ -666,6 +720,9 @@
             
             .hero-buttons {
                 justify-content: center;
+            }
+            .nav-links {
+                gap: 18px;
             }
         }
 
@@ -686,13 +743,48 @@
             
             .hero-buttons {
                 flex-direction: column;
-                gap: 15px;
+                gap: 8px !important;
             }
             
             .btn {
                 width: 100%;
                 text-align: center;
                 margin-right: 0;
+            }
+            .nav-toggle {
+                display: block;
+            }
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 70vw;
+                max-width: 320px;
+                height: 100vh;
+                background: var(--secondary);
+                box-shadow: var(--shadow);
+                padding: 100px 30px 30px 30px;
+                flex-direction: column;
+                gap: 30px;
+                z-index: 1050;
+                align-items: flex-start;
+                transition: var(--transition);
+            }
+            .nav-links.open {
+                display: flex !important;
+            }
+            .nav-container {
+                position: relative;
+            }
+            header {
+                padding: 12px 0;
+            }
+            .social-icons {
+                display: none;
+            }
+            section {
+                padding: 50px 0;
             }
         }
 
@@ -704,4 +796,13 @@
             .section-title {
                 font-size: 1.6rem;
             }
+            .nav-links {
+                width: 100vw;
+                max-width: none;
+                padding: 80px 20px 20px 20px;
+            }
+        }
+
+        body.menu-open {
+            overflow: hidden;
         }

@@ -77,3 +77,23 @@ if (showMoreLink && extraInfoDiv && arrow) {
         arrow.classList.toggle('rotated', isOpening);
     });
 }
+
+// Hamburger menu toggle
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+if (navToggle && navLinks) {
+    navToggle.addEventListener('click', function () {
+        const isOpen = navLinks.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+    });
+    // Optional: close menu when a link is clicked (for better UX)
+    navLinks.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function () {
+            navLinks.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', false);
+            document.body.classList.remove('menu-open');
+        });
+    });
+}
