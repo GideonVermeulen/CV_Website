@@ -786,6 +786,9 @@
             section {
                 padding: 50px 0;
             }
+            .extra-info.open {
+                max-height: none;
+            }
         }
 
         @media (max-width: 480px) {
