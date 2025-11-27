@@ -6,7 +6,6 @@
     <title>Gideon Vermeulen - CV</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* CV Styles */
         :root {
             --primary: #0a192f;
             --secondary: #112240;
@@ -14,457 +13,423 @@
             --text: #333;
             --text-light: #555;
             --white: #fff;
-            --light-bg: #f8f9fa;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
         body {
             color: var(--text);
-            line-height: 1.5;
-            background: var(--light-bg);
-            padding: 15px;
-            font-size: 14px;
+            line-height: 1.8;
+            background: #f9f9f9;
+            padding: 25px;
+            font-size: 1.1rem; /* larger base text */
         }
-        
+
         .cv-container {
-            max-width: 1000px;
+            max-width: 1050px;
             margin: 0 auto;
             background: var(--white);
             box-shadow: 0 5px 25px rgba(0,0,0,0.1);
             border-radius: 5px;
             overflow: hidden;
-            display: grid;
-            grid-template-columns: 300px 1fr;
         }
-        
+
         /* Header Section */
         .cv-header {
+            display: flex;
             background: var(--primary);
             color: white;
-            padding: 25px;
-            text-align: center;
+            padding: 50px;
+            align-items: center;
         }
-        
-        .headshot-container {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            overflow: hidden;
-            margin: 0 auto 20px;
-            border: 3px solid var(--accent);
-        }
-        
+
         .headshot-container img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            border-radius: 50%;
         }
-        
+
+        .header-content {
+            flex: 1;
+            margin-left: 25px;
+        }
+
         .name {
-            font-size: 1.6rem;
+            font-size: 3rem; /* bigger name */
             font-weight: 700;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
             color: var(--white);
         }
-        
+
         .title {
-            font-size: 1rem;
+            font-size: 1.65rem; /* slightly larger title */
             color: var(--accent);
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             font-weight: 500;
         }
-        
+
         .contact-info {
             display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-top: 20px;
+            flex-wrap: wrap;
+            gap: 22px;
         }
-        
+
         .contact-item {
             display: flex;
             align-items: center;
-            font-size: 0.8rem;
+            font-size: 1.1rem; /* increased */
         }
-        
+
         .contact-item i {
             color: var(--accent);
-            margin-right: 8px;
-            width: 16px;
+            margin-right: 10px;
+            width: 22px;
             text-align: center;
         }
-        
-        /* Sidebar Section */
-        .sidebar {
-            background: var(--secondary);
-            color: white;
-            padding: 25px;
-        }
-        
+
         /* Section Styles */
         .section {
-            padding: 20px;
+            padding: 40px 50px; /* more padding */
             border-bottom: 1px solid #eee;
         }
-        
+
         .section-title {
             color: var(--primary);
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-            padding-bottom: 8px;
+            font-size: 2rem; /* larger section title */
+            margin-bottom: 30px;
+            padding-bottom: 12px;
             border-bottom: 2px solid var(--accent);
             display: flex;
             align-items: center;
         }
-        
+
         .section-title i {
-            margin-right: 10px;
+            margin-right: 12px;
             color: var(--accent);
+            font-size: 1.6rem;
         }
-        
-        .sidebar .section-title {
-            color: var(--white);
-            border-bottom: 2px solid var(--accent);
-        }
-        
+
         /* Education */
         .education-item {
-            margin-bottom: 15px;
+            margin-bottom: 25px;
         }
-        
+
         .education-header {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
         }
-        
+
         .institution {
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 1.35rem;
             color: var(--primary);
         }
-        
-        .sidebar .institution {
-            color: var(--white);
-        }
-        
+
         .date {
             color: var(--text-light);
             font-style: italic;
-            font-size: 0.85rem;
+            font-size: 1.1rem;
         }
-        
-        .sidebar .date {
-            color: #ccc;
-        }
-        
+
         .degree {
             font-weight: 500;
-            margin-bottom: 5px;
-            font-size: 0.9rem;
+            margin-bottom: 8px;
+            font-size: 1.15rem;
         }
-        
+
         /* Skills */
         .skills-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 28px;
         }
-        
+
         .skill-category h3 {
             color: var(--primary);
-            margin-bottom: 8px;
-            font-size: 1rem;
+            margin-bottom: 12px;
+            font-size: 1.45rem; /* larger subheading */
         }
-        
-        .sidebar .skill-category h3 {
-            color: var(--white);
-        }
-        
+
         .skill-list {
             display: flex;
             flex-wrap: wrap;
-            gap: 6px;
+            gap: 10px;
         }
-        
+
         .skill-tag {
             background: rgba(100, 255, 218, 0.1);
             color: var(--text);
-            padding: 4px 10px;
+            padding: 7px 16px;
             border-radius: 20px;
-            font-size: 0.8rem;
+            font-size: 1.05rem;
             border: 1px solid rgba(100, 255, 218, 0.3);
         }
-        
-        .sidebar .skill-tag {
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
+
         /* Projects */
         .project-item {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             page-break-inside: avoid;
         }
-        
+
         .project-header {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
-        
+
         .project-title {
             font-weight: 600;
             color: var(--primary);
-            font-size: 1rem;
+            font-size: 1.45rem;
             display: flex;
             align-items: center;
         }
-        
+
         .project-title i {
             color: var(--accent);
-            margin-right: 8px;
+            margin-right: 10px;
+            font-size: 1.3rem;
         }
-        
+
         .project-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 6px;
-            margin: 8px 0;
+            gap: 10px;
+            margin: 12px 0;
         }
-        
+
         .project-tag {
             background: rgba(10, 25, 47, 0.05);
             color: var(--text);
-            font-size: 0.75rem;
-            padding: 3px 8px;
+            font-size: 1rem;
+            padding: 5px 13px;
             border-radius: 20px;
         }
-        
+
         .project-description {
             color: var(--text-light);
-            margin-bottom: 8px;
-            font-size: 0.9rem;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
         }
-        
-        /* Main Content */
-        .main-content {
-            padding: 20px;
+
+        /* Footer */
+        .cv-footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--text-light);
+            font-size: 1.05rem;
+            background: #f5f5f5;
         }
-        
+
         /* Print Styles */
         @media print {
             body {
                 padding: 0;
                 background: white;
             }
-            
             .cv-container {
                 box-shadow: none;
                 border-radius: 0;
             }
-            
             .section {
                 page-break-inside: avoid;
             }
         }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .cv-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .sidebar {
-                order: 2;
-            }
-            
-            .main-content {
-                order: 1;
+        /* Retina image quality */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .headshot-container img {
+                image-rendering: -webkit-optimize-contrast;
             }
         }
     </style>
 </head>
 <body>
     <div class="cv-container">
-        <!-- Header with Headshot -->
         <div class="cv-header">
             <div class="headshot-container">
-                <img src="images/Headshot2.jpg" alt="Gideon Vermeulen" onerror="this.style.display='none'; this.parentNode.style.background='#112240'; this.parentNode.innerHTML='<i class=\'fas fa-user\' style=\'color:white;font-size:3rem;margin-top:50px;margin-left:45px;\'></i>'">
+                <img src="images/Headshot.jpg" alt="Gideon Vermeulen" onerror="this.style.display='none'; this.parentNode.style.background='#112240'; this.parentNode.innerHTML='<i class=\'fas fa-user\' style=\'color:white;font-size:3rem;margin-top:50px;margin-left:45px;\'></i>'">
             </div>
-            <h1 class="name">Gideon Vermeulen</h1>
-            <div class="title">Software Developer & AI Enthusiast</div>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    gideonnicovermeulen@gmail.com
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    +27 63 563 2963
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-github"></i>
-                    github.com/GideonVermeulen
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    Stellenbosch, South Africa
-                </div>
-            </div>
-        </div>
-        
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <!-- Profile Section -->
-            <div class="section">
-                <h2 class="section-title"><i class="fas fa-user"></i> Profile</h2>
-                <p>Third-year Bachelor of Computing student passionate about robotics, web development, and machine learning. Aiming to solve real-world problems using IT solutions. Experienced in building both frontend and backend components of applications, especially in educational and research-focused settings.</p>
-                <p>Quick to learn, collaborative, and eager to solve new problems through code. Seeking internship opportunities to gain real-world experience and contribute to software development projects.</p>
-            </div>
-            
-            <!-- Education Section -->
-            <div class="section">
-                <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
-                <div class="education-item">
-                    <div class="education-header">
-                        <div class="institution">Belgium Campus iTversity</div>
-                        <div class="date">2023 - Present</div>
+            <div class="header-content">
+                <h1 class="name">Gideon Vermeulen</h1>
+                <div class="title">Software Developer & AI Enthusiast</div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        gideonnicovermeulen@gmail.com
                     </div>
-                    <div class="degree">Bachelor of Computing (BComp) — 3rd Year</div>
-                    <p>Areas of focus: Software Engineering, AI, Web Development</p>
-                    <p>Selected to participate in UCLL International Project focusing on combating water hyacinth through innovative IT solutions.</p>
-                </div>
-                
-                <div class="education-item">
-                    <div class="education-header">
-                        <div class="institution">Paul Roos Gimnasium</div>
-                        <div class="date">Matriculated 2022</div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        +27 63 563 2963
                     </div>
-                    <div class="degree">National Senior Certificate</div>
-                </div>
-            </div>
-            
-            <!-- Skills Section -->
-            <div class="section">
-                <h2 class="section-title"><i class="fas fa-code"></i> Technical Skills</h2>
-                <div class="skills-container">
-                    <div class="skill-category">
-                        <h3>Languages</h3>
-                        <div class="skill-list">
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">TypeScript</span>
-                            <span class="skill-tag">C#</span>
-                            <span class="skill-tag">Java</span>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">SQL</span>
-                            <span class="skill-tag">HTML/CSS</span>
-                            <span class="skill-tag">C++ (Arduino)</span>
-                        </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        github.com/GideonVermeulen
                     </div>
-                    
-                    <div class="skill-category">
-                        <h3>Frameworks & Libraries</h3>
-                        <div class="skill-list">
-                            <span class="skill-tag">Node.js</span>
-                            <span class="skill-tag">Express.js</span>
-                            <span class="skill-tag">Flask</span>
-                            <span class="skill-tag">.NET</span>
-                            <span class="skill-tag">scikit-learn</span>
-                            <span class="skill-tag">TensorFlow</span>
-                            <span class="skill-tag">YOLO</span>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-category">
-                        <h3>Databases</h3>
-                        <div class="skill-list">
-                            <span class="skill-tag">SQL Server</span>
-                            <span class="skill-tag">SQLite</span>
-                            <span class="skill-tag">MongoDB</span>
-                            <span class="skill-tag">PostgreSQL</span>
-                            <span class="skill-tag">Redis</span>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-category">
-                        <h3>Tools & Platforms</h3>
-                        <div class="skill-list">
-                            <span class="skill-tag">Git & GitHub</span>
-                            <span class="skill-tag">Postman</span>
-                            <span class="skill-tag">RESTful APIs</span>
-                            <span class="skill-tag">Docker</span>
-                            <span class="skill-tag">Arduino</span>
-                        </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Stellenbosch, South Africa
                     </div>
                 </div>
             </div>
         </div>
         
-        <!-- Main Content -->
-        <div class="main-content">
-            <!-- Projects Section -->
-            <div class="section">
-                <h2 class="section-title"><i class="fas fa-project-diagram"></i> Projects</h2>
-                
-                <div class="project-item">
-                    <div class="project-header">
-                        <div class="project-title"><i class="fas fa-seedling"></i> Self-Watering Smart Plant Pot</div>
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-user"></i> Profile</h2>
+            <p>Third-year Bachelor of Computing student passionate about robotics, web development, and machine learning. Aiming to solve real-world problems using IT solutions. Experienced in building both frontend and backend components of applications, especially in educational and research-focused settings.</p>
+            <p>Quick to learn, collaborative, and eager to solve new problems through code. Seeking internship opportunities to gain real-world experience and contribute to software development projects.</p>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+            <div class="education-item">
+                <div class="education-header">
+                    <div class="institution">Belgium Campus iTversity — Stellenbosch Campus</div>
+                    <div class="date">2023 - Present</div>
+                </div>
+                <div class="degree">Bachelor of Computing (BComp) — 3rd Year</div>
+                <p>Areas of focus: Software Engineering, AI, Web Development</p>
+                <p>Selected to participate in UCLL International Project focusing on combating water hyacinth through innovative IT solutions.</p>
+            </div>
+            
+            <div class="education-item">
+                <div class="education-header">
+                    <div class="institution">Paul Roos Gimnasium</div>
+                    <div class="date">Matriculated 2022</div>
+                </div>
+                <div class="degree">National Senior Certificate</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-code"></i> Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">C++ (Arduino)</span>
                     </div>
-                    <div class="project-tags">
-                        <span class="project-tag">Arduino</span>
-                        <span class="project-tag">IoT</span>
-                        <span class="project-tag">Embedded Systems</span>
-                    </div>
-                    <p class="project-description">Monitors soil moisture, humidity, and temperature to trigger watering automatically. Uses Arduino hardware with custom control logic.</p>
                 </div>
                 
-                <div class="project-item">
-                    <div class="project-header">
-                        <div class="project-title"><i class="fas fa-gas-pump"></i> ULP95 Fuel Price Prediction</div>
+                <div class="skill-category">
+                    <h3>Frameworks & Libraries</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express.js</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">.NET</span>
+                        <span class="skill-tag">scikit-learn</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">YOLO</span>
                     </div>
-                    <div class="project-tags">
-                        <span class="project-tag">Python</span>
-                        <span class="project-tag">scikit-learn</span>
-                        <span class="project-tag">Flask</span>
-                        <span class="project-tag">Public API</span>
-                    </div>
-                    <p class="project-description">Predicts fuel prices in the South African coastal region using machine learning. Integrates web scraping and API input to automate predictions.</p>
                 </div>
                 
-                <div class="project-item">
-                    <div class="project-header">
-                        <div class="project-title"><i class="fas fa-robot"></i> Water Hyacinth Detection</div>
+                <div class="skill-category">
+                    <h3>Databases</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Microsoft SQL Server</span>
+                        <span class="skill-tag">SQLite</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">Java DB</span>
                     </div>
-                    <div class="project-tags">
-                        <span class="project-tag">YOLOv8</span>
-                        <span class="project-tag">Python</span>
-                        <span class="project-tag">Arduino</span>
-                        <span class="project-tag">IoT</span>
-                    </div>
-                    <p class="project-description">YOLOv8-based object detection model to identify water hyacinth. Created Arduino-powered demo as part of international project.</p>
                 </div>
                 
-                <div class="project-item">
-                    <div class="project-header">
-                        <div class="project-title"><i class="fas fa-graduation-cap"></i> Student Grade Prediction</div>
+                <div class="skill-category">
+                    <h3>Tools & Platforms</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Git & GitHub</span>
+                        <span class="skill-tag">Postman</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Arduino</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Docker</span>
                     </div>
-                    <div class="project-tags">
-                        <span class="project-tag">Python</span>
-                        <span class="project-tag">scikit-learn</span>
-                        <span class="project-tag">Flask</span>
-                        <span class="project-tag">ANN</span>
-                    </div>
-                    <p class="project-description">ANN powered student grade classifier built in Python with scikit-learn, deployed via Flask on Render.</p>
                 </div>
             </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-project-diagram"></i> Projects</h2>
+            
+            <div class="project-item">
+                <div class="project-header">
+                    <div class="project-title"><i class="fas fa-university"></i> CampusLearn Full-Stack Platform</div>
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">Node.js</span>
+                    <span class="project-tag">TypeScript</span>
+                    <span class="project-tag">MongoDB</span>
+                    <span class="project-tag">Redis</span>
+                    <span class="project-tag">Socket.IO</span>
+                    <span class="project-tag">WebRTC</span>
+                    <span class="project-tag">Docker</span>
+                    <span class="project-tag">AWS</span>
+                    <span class="project-tag">CI/CD</span>
+                    <span class="project-tag">REST API</span>
+                    <span class="project-tag">JWT</span>
+                </div>
+                <p class="project-description">A comprehensive educational platform connecting students and tutors, featuring a performance-oriented backend. The system includes real-time chat, a forum with live voting, video calling via WebRTC. The architecture leverages Node.js with TypeScript, using Redis for caching, MongoDB for persistence, and Socket.IO for real-time event handling. The entire application is containerized with multi-stage Docker builds and deployed on AWS via a full CI/CD pipeline using CodeBuild and ECS.</p>
+            </div>
+            
+            <div class="project-item">
+                <div class="project-header">
+                    <div class="project-title"><i class="fas fa-gas-pump"></i> ULP95 Fuel Price Prediction</div>
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">Python</span>
+                    <span class="project-tag">scikit-learn</span>
+                    <span class="project-tag">Flask</span>
+                    <span class="project-tag">Public API's</span>
+                </div>
+                <p class="project-description">Predicts fuel prices in the South African coastal region using machine learning. Integrates web scraping and API input to automate predictions.</p>
+            </div>
+            
+            <div class="project-item">
+                <div class="project-header">
+                    <div class="project-title"><i class="fas fa-robot"></i> Water Hyacinth Detection</div>
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">YOLOv8</span>
+                    <span class="project-tag">Python</span>
+                    <span class="project-tag">Arduino</span>
+                    <span class="project-tag">IoT</span>
+                </div>
+                <p class="project-description">YOLOv8-based object detection model to identify water hyacinth. Created Arduino-powered demo as part of international project.</p>
+            </div>
+            
+            <div class="project-item">
+                <div class="project-header">
+                    <div class="project-title"><i class="fas fa-graduation-cap"></i> Student Grade Prediction</div>
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">Python</span>
+                    <span class="project-tag">scikit-learn</span>
+                    <span class="project-tag">Flask</span>
+                    <span class="project-tag">ANN</span>
+                </div>
+                <p class="project-description">ANN powered student grade classifier built in Python with scikit-learn, deployed via Flask on Render.</p>
+            </div>
+        </div>
+        
+        <div class="cv-footer">
+            Designed & Built by Gideon Vermeulen | References available upon request
         </div>
     </div>
 
